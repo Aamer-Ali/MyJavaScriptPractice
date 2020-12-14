@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function validateMobile(){
+                var mobile_no = document.getElementById("mobile").value;
+                
+                // regx = new RegExp("[7-9]\d{9}","g");
+                var regx = /^[7-9]\d{9}$/; // <-- Reg ex for indian mobile.
+                if(regx.test(mobile_no)){
+                    document.getElementById("lblMobileValidator").innerHTML = "Valid"
+                    document.getElementById("lblMobileValidator").style.visibility = "visible";
+                    document.getElementById("lblMobileValidator").style.color = "green";
+                }
+                else{
+                    document.getElementById("lblMobileValidator").innerHTML = "Invalid"
+                    document.getElementById("lblMobileValidator").style.visibility = "visible";
+                    document.getElementById("lblMobileValidator").style.color = "red";
+                }
+           }
+        </script>
+    </head>
+    <body>
+           <input type="text" name="mobile" id="mobile" placeholder="Mobile">
+           <label id="lblMobileValidator" style="color: red;visibility: hidden">Invalid Mobile</label>
+           <br>
+           <button onclick="validateMobile()" >Login</button>
+    </body>
+</html>

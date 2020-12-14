@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function validateEmail(){
+                var email = document.getElementById("email").value;
+                
+                // regx = new RegExp("[7-9]\d{9}","g");
+                var regx = /^^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]).([a-z]{2,20})(.[a-z]{2,8})?$/; // <-- Not one there are many differen  ways to check email .
+                if(regx.test(email)){
+                    document.getElementById("lblEmailValidator").innerHTML = "Valid"
+                    document.getElementById("lblEmailValidator").style.visibility = "visible";
+                    document.getElementById("lblEmailValidator").style.color = "green";
+                }
+                else{
+                    document.getElementById("lblEmailValidator").innerHTML = "Invalid"
+                    document.getElementById("lblEmailValidator").style.visibility = "visible";
+                    document.getElementById("lblEmailValidator").style.color = "red";
+                }
+           }
+        </script>
+    </head>
+    <body>
+           <input type="text" name="email" id="email" placeholder="Email">
+           <label id="lblEmailValidator" style="visibility: hidden">Validation</label>
+           <br>
+           <button onclick="validateEmail()" >Login</button>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function validateUsername(){
+                var username = document.getElementById("username").value;
+                var regx = /E00/;
+                if(regx.test(username)){
+                    document.getElementById("lblUserValidator").style.visibility = "hidden";
+                }
+                else{
+                    // alert("Invalid username");
+                    document.getElementById("lblUserValidator").style.visibility = "visible";
+                }
+           }
+        </script>
+    </head>
+    <body>
+           <input type="text" name="username" id="username" placeholder="Username">
+           <label id="lblUserValidator" style="color: red;visibility: hidden">Invalid Username</label>
+           <br>
+           <button onclick="validateUsername()" >Login</button>
+    </body>
