@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function getByClassName()
+           {
+              var element =  document.getElementsByClassName("myPara");
+              for (let x = 0; x < element.length; x++) {
+                  element[x].style.color = "red";
+              }
+
+              var element =  document.getElementsByClassName("myPara2");
+              for (let x = 0; x < element.length; x++) {
+                  element[x].style.color = "green";
+              }
+            }
+        </script>
+    </head>
+    <body>
+        <p class="myPara">This is paragraph 1</p>
+        <p class="myPara2">This is paragraph 2</p>
+        <p class="myPara">This is paragraph 3</p>
+        <p class="myPara2">This is paragraph 4</p>
+        <p class="myPara">This is paragraph 5</p>
+        <button onclick="getByClassName()">Submit Data</button>
+    </body>
+</html>

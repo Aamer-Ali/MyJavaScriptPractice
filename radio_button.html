@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function checkSelection(){
+               var rd1 = document.getElementById("rdbtn1");
+               var rd2 = document.getElementById("rdbtn2");
+                if(rd1.checked==true)
+                    {
+                        alert("You have checked Simple " + rd1.value);
+                    }
+                    else if(rd2.checked == true)
+                    {
+                        alert("You have chekced " + rd2.value);
+                    }
+                    else{
+                        alert("Noting is selected");
+                    }
+           }
+        </script>
+    </head>
+    <body>
+        <input type="radio" name="rdbtnGroup" id="rdbtn1" value="Simple Sinippet">Simple Sinppet </input>
+        <br>
+        <input type="radio" name="rdbtnGroup" id="rdbtn2" value="Aamer's Learing">Aamer's Learing </input>
+        <br>
+        <button onclick="checkSelection()">Submit</button>
+    </body>
+</html>

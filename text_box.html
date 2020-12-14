@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function submitData(){
+               var user_name = document.getElementById("txtName").value;
+               var password = document.getElementById("txtPassword").value;
+               if(user_name == password){
+                   alert("Username and password is same");
+               }
+               else{
+                alert("Username and password is different");
+               }
+           }
+        </script>
+    </head>
+    <body>
+        <input name="txtName" id="txtName" placeholder="Username">
+        <input type="password" name="txtPassword" id="txtPassword" placeholder="Password">
+        <br>
+        <button onclick="submitData()" id="btn_submit_data">Submit data</button>
+    </body>
+</html>

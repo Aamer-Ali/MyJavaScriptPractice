@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+        
+
+           function myMouseOver(){
+            document.getElementById("imgView").src = "myImage2.png"
+           }
+
+           function myMouseOut(){
+            document.getElementById("imgView").src = "myImage.png"
+           }
+        </script>
+    </head>
+    <body>
+        <img id="imgView" onmouseover="myMouseOver()" onmouseout="myMouseOut()" height="200" width="300" src="myImage.png" alt="This is image">
+    </body>
+</html>

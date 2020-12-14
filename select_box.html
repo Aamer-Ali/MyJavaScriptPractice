@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function selectFromDD(){
+               var select = document.getElementById("selectBox");
+               alert(select.options[select.selectedIndex].value);
+           }
+        </script>
+    </head>
+    <body>
+        <select name="selectBox" onchange="selectFromDD()" id="selectBox">
+            <option value="Simple Sinppet">Simple Sinppet</option>
+            <option value="Aamer's Learning">Aamer's Learning</option>
+            <option value="Youtube Chanle">Youtube Chanle</option>
+        </select>
+        <button onclick="selectFromDD()">Submit</button>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>This is Dom Practice</title>
+        <script type="text/javascript">
+           function validateUser(){
+            
+                var username = document.getElementById("username");
+                var password = document.getElementById("password");
+               
+                if(username.value.trim() == "" || password.value.trim() == "")
+                {
+                    alert("Please Enter username and password.");
+                    return false;
+                }
+                else{
+                    if(username.value.trim() == "Aamer" && password.value.trim() == "1234")
+                    {
+                        alert("welcome ....");
+                        return true;
+                    }
+                    else{
+                        alert('Invalid username and password')
+                        return false;
+                    }
+                }
+           }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validateUser()" action="select_box.html">
+           <input type="text" name="username" id="username" placeholder="Username">
+           <br>
+           <input type="text" name="password" id="password" placeholder="Password">
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </body>
+</html>
